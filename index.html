@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Angelo | Portfolio</title>
+    <title>Marc Fagela | Portfolio</title>
     <!-- Poppins Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
@@ -14,7 +14,7 @@
 
     <!-- Navigation Bar -->
     <header class="navbar">
-        <div class="logo">Marc<span>.</span></div>
+        <div class="logo">Maru<span>.</span></div>
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
@@ -31,9 +31,9 @@
         <!-- Left Side Content -->
         <div class="hero-content">
             <h3>Hi, It's Me</h3>
-            <h1>Marc Angelo</h1>
+            <h1>Marc Fagela</h1>
             <div class="animated-text">
-                I'm a <span id="typing-text">Application Developer</span><span class="cursor">|</span>
+                I'm a <span id="typing-text">Front End Developer</span><span class="cursor">|</span>
             </div>
             <p>
                 Specializing in Mobile Application & Web Development, UI/UX design, and database management. 
@@ -77,8 +77,18 @@
         let isDeleting = false;
         const typingTextElem = document.getElementById("typing-text");
 
-        function type() {
+       function type() {
             const currentRole = roles[roleIndex];
+
+            // DITO NAKALAGAY YUNG CHANGING COLORS NG ROLES:
+            if (currentRole === "UI/UX Designer") {
+                typingTextElem.style.color = "#2ecc71"; // Ito yung Green
+            } else if (currentRole === "Vlogger") {
+                typingTextElem.style.color = "#3498db"; // Ito yung Blue
+            } else {
+                typingTextElem.style.color = "#FFFF00"; // Ito yung Yellow
+            }
+
             if (isDeleting) {
                 typingTextElem.textContent = currentRole.substring(0, charIndex - 1);
                 charIndex--;
