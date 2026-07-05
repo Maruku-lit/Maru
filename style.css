@@ -261,3 +261,61 @@ body {
         display: none; 
     }
 }
+
+/* Contact Section Styles */
+.contact {
+    padding: 100px 7% 100px;
+    background: #0c0c0c; /* Bagay sa dark layout mo */
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.contact h2 span {
+    color: #b11d31; /* Ang pirma mong Red color */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact .input-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #1a1a1a;
+    border: 2px solid #222;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ffcc00; /* Magbi-blink o mag-highlight sa Yellow kapag kinlik (gaya ng Student role mo!) */
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact .btn {
+    align-self: center;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+}
