@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marc Fagela | Portfolio</title>
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marc Fagela | Portfolio</title>
 
+    <!-- Poppins Font -->
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
     <!-- Navigation Bar -->
 <header class="navbar">
+
     <div class="logo">Maru<span>.</span></div>
     <nav>
         <ul>
@@ -27,51 +29,51 @@
 </header>
 
     <!-- Hero Section -->
-<section class="hero" id="home">
-        <!-- Left Side Content -->
-    <div class="hero-content">
+    <section class="hero" id="home">
+
+    <!-- Left Side Content -->
+     <div class="hero-content">
         <h3>Hi, It's Me</h3>
         <h1>Marc Fagela</h1>
         <div class="animated-text">
-                I'm a <span id="typing-text">Front End Developer</span><span class="cursor">|</span>
+            I'm a <span id="typing-text">Front End Developer</span><span class="cursor">|</span>
         </div>
         <p>
-                Specializing in Mobile Application & Web Development, UI/UX design, and database management. 
-                Passionate about building interactive educational solutions and leading next-generation technology initiatives.
-            </p>
+            Specializing in Mobile Application & Web Development, UI/UX design, and database management. 
+            Passionate about building interactive educational solutions and leading next-generation technology initiatives.
+        </p>
 
-            <!-- Social Links -->
+    <!-- Social Links -->
 <div class="social-icons">
-            <!-- GitHub Link -->
+    <!-- GitHub Link -->
         <a href="https://github.com/Maruku-lit" target="_blank"><i class="fab fa-github"></i></a>
-            <!-- LinkedIn Link -->
-    <a href="https://www.linkedin.com/in/marc-fagela-062154318" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <!-- Facebook Link -->
-    <a href="https://www.facebook.com/mik.fga" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <!-- YouTube Link (Replaced the code icon) -->
-    <a href="https://www.youtube.com/@MarcFagela" target="_blank"><i class="fab fa-youtube"></i></a>
+    <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/marc-fagela-062154318" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Facebook Link -->
+        <a href="https://www.facebook.com/mik.fga" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <!-- YouTube Link (Replaced the code icon) -->
+        <a href="https://www.youtube.com/@MarcFagela" target="_blank"><i class="fab fa-youtube"></i></a>
 </div>
 
-            <!-- Action Buttons -->
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Let's Talk</a>
-            </div>
-        </div>
+    <!-- Action Buttons -->
+     <div class="cta-buttons">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn secondary">Let's Talk</a>
+    </div>
+</div>
 
-        <!-- Right Side: Large, 3D Interactive Mosaic Card -->
-        <div class="hero-image-wrapper">
-            <div class="tilt-card" id="tiltCard">
-                <img src="Maru.jpg" alt="Marc Angelo Mosaic" class="hero-img">
-                <div class="card-glow"></div>
-            </div>
+    <!-- Right Side: Large, 3D Interactive Mosaic -->
+     <div class="hero-image-wrapper">
+        <div class="tilt-card" id="tiltCard">
+            <img src="Maru.jpg" alt="Marc Angelo Mosaic" class="hero-img">
+            <div class="card-glow"></div>
+        </div>
     </div>
 </section>
 
     <!-- Contact Section -->
 <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
-    
     <form id="contactForm">
     <div class="input-group">
         <!-- May name="name" at name="email" dapat -->
@@ -82,6 +84,7 @@
         <!-- May name="purpose" -->
         <input type="text" id="userPurpose" name="purpose" placeholder="Purpose..." required>
     </div>
+
     <!-- May name="message" -->
     <textarea id="userMessage" name="message" rows="6" placeholder="Write your message here..." required></textarea>
     
@@ -101,63 +104,63 @@
        function type() {
             const currentRole = roles[roleIndex];
 
-            // DITO NAKALAGAY YUNG CHANGING COLORS NG ROLES:
-            if (currentRole === "UI/UX Designer") {
-                typingTextElem.style.color = "#2ecc71"; // Ito yung Green
-            } else if (currentRole === "Vlogger") {
-                typingTextElem.style.color = "#3498db"; // Ito yung Blue
-            } else {
-                typingTextElem.style.color = "#FFFF00"; // Ito yung Yellow
-            }
+    // DITO NAKALAGAY YUNG CHANGING COLORS NG ROLES:
+    if (currentRole === "UI/UX Designer") {
+        typingTextElem.style.color = "#2ecc71"; // Ito yung Green
+    } else if (currentRole === "Vlogger") {
+        typingTextElem.style.color = "#3498db"; // Ito yung Blue
+    } else {
+        typingTextElem.style.color = "#FFFF00"; // Ito yung Yellow
+    }
 
-            if (isDeleting) {
-                typingTextElem.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingTextElem.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-            }
+    if (isDeleting) {
+        typingTextElem.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingTextElem.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+    }
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                setTimeout(type, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(type, 500);
-            } else {
-                setTimeout(type, isDeleting ? 50 : 100);
-            }
-        }
+    if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        setTimeout(type, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(type, 500);
+    } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+}
 
-        // --- 2. 3D Parallax Tilt Effect ---
+    // --- 2. 3D Parallax Tilt Effect ---
         const card = document.getElementById('tiltCard');
         
-        document.addEventListener('mousemove', (e) => {
-            const cardRect = card.getBoundingClientRect();
-            // Find center coordinates of the picture card
-            const cardCenterX = cardRect.left + cardRect.width / 2;
-            const cardCenterY = cardRect.top + cardRect.height / 2;
+    document.addEventListener('mousemove', (e) => {
+        const cardRect = card.getBoundingClientRect();
+    // Find center coordinates of the picture card
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const cardCenterY = cardRect.top + cardRect.height / 2;
             
-            // Calculate mouse distance from center
-            const x = e.clientX - cardCenterX;
-            const y = e.clientY - cardCenterY;
+    // Calculate mouse distance from center
+        const x = e.clientX - cardCenterX;
+        const y = e.clientY - cardCenterY;
             
-            // Map distances to a clean degree rotation constraint
-            const maxTilt = 15; 
-            const tiltX = (y / (window.innerHeight / 2)) * -maxTilt;
-            const tiltY = (x / (window.innerWidth / 2)) * maxTilt;
+    // Map distances to a clean degree rotation constraint
+        const maxTilt = 15; 
+        const tiltX = (y / (window.innerHeight / 2)) * -maxTilt;
+        const tiltY = (x / (window.innerWidth / 2)) * maxTilt;
             
-            // Apply fluid 3D transformations
-            card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.03, 1.03, 1.03)`;
-        });
+    // Apply fluid 3D transformations
+        card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.03, 1.03, 1.03)`;
+    });
 
-        // Reset positions smoothly when mouse leaves screen area
+    // Reset positions smoothly when mouse leaves screen area
         document.addEventListener('mouseleave', () => {
-            card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-        });
+        card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    });
 
-// --- 3. Direct Contact Form Submission via AJAX ---
+    // --- 3. Direct Contact Form Submission via AJAX ---
         document.getElementById("contactForm").addEventListener("submit", function(e) {
             e.preventDefault(); 
 
